@@ -1,0 +1,47 @@
+/* Q1*/
+
+
+div {
+    background-color: #ddd;
+    width: 400px;
+    height: 50px;
+    margin: 50px auto;
+    padding: 0 0 0 10px;
+    line-height: 50px;
+    position: relative;
+}
+
+div::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 20px solid;
+    border-color: transparent transparent #ddd transparent;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.top::after {
+    top: -20px;
+    border-color: transparent transparent #ddd transparent;
+}
+
+.right::after {
+    left: calc(100% + 5%);
+    border-color: transparent transparent transparent #ddd;
+    z-index: 1;
+}
+
+.bottom::after {
+    top: calc(100% + 36%);
+    border-color: #ddd transparent transparent transparent;
+    z-index: 1;
+}
+
+.left::after {
+    left: -4%;
+    border-color: transparent #ddd transparent transparent;
+    z-index: 1;
+}
